@@ -1,11 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> 
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Muhammad Asri</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Hello World</h1>
+<body class="bg-white text-black font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed w-full bg-white shadow-md z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold tracking-wide">MyPortfolio</h1>
+      <div class="space-x-6 hidden md:block">
+        <a href="#about" class="hover:text-gray-600">Tentang</a>
+        <a href="#education" class="hover:text-gray-600">Pendidikan</a>
+        <a href="#skills" class="hover:text-gray-600">Skill</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center bg-black text-white">
+    <div class="text-center px-6">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">Muhammad Asri</h2>
+      <p class="text-lg md:text-xl mb-6">Mahasiswa Ilmu Komputer | Web Developer</p>
+      <a href="#about" class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
+        Lihat Profil
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Tentang Saya</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Saya adalah mahasiswa Ilmu Komputer yang memiliki minat di bidang pengembangan web dan aplikasi.
+        Saya terbiasa menggunakan teknologi modern seperti Laravel, Tailwind CSS, dan MySQL dalam membangun aplikasi berbasis web.
+        Saya memiliki semangat belajar tinggi dan senang mengembangkan proyek digital yang bermanfaat.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-20 bg-gray-100">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Jenjang Pendidikan</h2>
+      <div class="space-y-8">
+        
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold">S1 Ilmu Komputer</h3>
+          <p class="text-gray-600">Universitas Halu Oleo</p>
+          <p class="text-sm text-gray-500">2024 - Sekarang</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold">SMA</h3>
+          <p class="text-gray-600">Jurusan IPA</p>
+          <p class="text-sm text-gray-500">2021 - 2024</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+        <div class="bg-black text-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+          HTML
+        </div>
+
+        <div class="bg-black text-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+          CSS / Tailwind
+        </div>
+
+        <div class="bg-black text-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+          JavaScript
+        </div>
+
+        <div class="bg-black text-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+          Laravel
+        </div>
+
+        <div class="bg-black text-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+          MySQL
+        </div>
+
+        <div class="bg-black text-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+          Java
+        </div>
+
+        <div class="bg-black text-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+          Git
+        </div>
+
+        <div class="bg-black text-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+          UI/UX Design
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-6">
+    <p>&copy; 2026 Muhammad Asri. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
