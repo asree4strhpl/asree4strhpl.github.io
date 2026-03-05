@@ -10,6 +10,45 @@
 
 <!-- Smooth Scroll -->
 <style>
+.card-effect{
+position:relative;
+overflow:hidden;
+border:1px solid transparent;
+transition:all .3s ease;
+}
+
+.card-effect::before{
+content:"";
+position:absolute;
+inset:-2px;
+border-radius:16px;
+background:linear-gradient(120deg, transparent, rgba(0, 113, 128, 0.826), transparent);
+opacity:0;
+transition:opacity .4s;
+z-index:-1;
+}
+
+.card-effect:hover::before{
+opacity:1;
+}
+
+.card-effect::after{
+content:"";
+position:absolute;
+left:var(--x);
+top:var(--y);
+transform:translate(-50%,-50%);
+width:200px;
+height:200px;
+background:radial-gradient(circle, rgba(0, 79, 100, 0.35), transparent 70%);
+opacity:0;
+pointer-events:none;
+transition:opacity .3s;
+}
+
+.card-effect:hover::after{
+opacity:1;
+}
 html{
 scroll-behavior:smooth;
 }
@@ -49,6 +88,8 @@ scroll-behavior:smooth;
 <!-- HERO -->
 <section class="min-h-screen flex items-center justify-center bg-gray-700 text-white">
 
+<!-- Container Particles -->
+<div id="particles-js" class="absolute inset-0"></div>
 <div class="text-center px-6" data-aos="fade-up">
 
 <div class="flex justify-center mb-6">
@@ -112,42 +153,42 @@ Saya memiliki semangat belajar tinggi dan senang mengembangkan proyek digital ya
 
 <div class="space-y-5">
 
-<div data-aos="fade-up" class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+<!-- Card -->
+<div data-aos="fade-up"
+class="card-effect relative bg-white p-6 rounded-2xl shadow-md transition duration-300 hover:-translate-y-2">
 
 <h3 class="text-xl font-semibold">S1 Ilmu Komputer</h3>
-
 <p class="text-gray-600">Universitas Halu Oleo</p>
-
 <p class="text-sm text-gray-500">2024 - Sekarang</p>
 
 </div>
 
-<div data-aos="fade-up" class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+<!-- Card -->
+<div data-aos="fade-up"
+class="card-effect relative bg-white p-6 rounded-2xl shadow-md transition duration-300 hover:-translate-y-2">
 
 <h3 class="text-xl font-semibold">SMA</h3>
-
 <p class="text-gray-600">SMA Negeri 1 Asera</p>
-
 <p class="text-sm text-gray-500">2021 - 2024</p>
 
 </div>
 
-<div data-aos="fade-up" class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+<!-- Card -->
+<div data-aos="fade-up"
+class="card-effect relative bg-white p-6 rounded-2xl shadow-md transition duration-300 hover:-translate-y-2">
 
 <h3 class="text-xl font-semibold">SMP</h3>
-
 <p class="text-gray-600">MTS Muhammadiyah</p>
-
 <p class="text-sm text-gray-500">2018 - 2021</p>
 
 </div>
 
-<div data-aos="fade-up" class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+<!-- Card -->
+<div data-aos="fade-up"
+class="card-effect relative bg-white p-6 rounded-2xl shadow-md transition duration-300 hover:-translate-y-2">
 
 <h3 class="text-xl font-semibold">SD</h3>
-
 <p class="text-gray-600">MI Muhammadiyah</p>
-
 <p class="text-sm text-gray-500">2013 - 2018</p>
 
 </div>
@@ -286,60 +327,8 @@ class="w-16 h-16 rounded-2xl hover:scale-110 transition">
 
 <!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<script>
-AOS.init({
-duration:1000,
-once:true
-});
-</script>
-
-
-<!-- TYPING EFFECT -->
-<script>
-
-const text = "Web Developer";
-let index = 0;
-
-function type(){
-
-if(index < text.length){
-
-document.getElementById("typing").innerHTML += text.charAt(index);
-
-index++;
-
-setTimeout(type,80);
-
-}
-
-}
-
-type();
-
-</script>
-
-
-<!-- NAVBAR SCROLL EFFECT -->
-<script>
-
-window.addEventListener("scroll", function(){
-
-const navbar = document.getElementById("navbar");
-
-if(window.scrollY > 50){
-
-navbar.classList.add("shadow-lg","bg-white");
-
-}else{
-
-navbar.classList.remove("shadow-lg");
-
-}
-
-});
-
-</script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script src="style.js"></script>
 
 </body>
 </html>
